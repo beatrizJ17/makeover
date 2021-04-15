@@ -11,19 +11,21 @@ html{
 body{
 	font-family: 'Amaranth';
 	font-size: 1.2rem;
-    min-height: 100%;   
+    min-height: 100%;
+    background-color: #999999;   
 }
 
-
 .grid-container {
+	min-height: 100%;
 	display: grid;
 	grid-gap: 10px;
-	grid-template-areas: 
-	      "header"
-	      "navbar"
-	      "main"
-	      "sidebar"
-	      "footer";
+
+	grid-template: 
+	      "A" auto
+	      "B" auto
+	      "C" 10rem
+	      "D" auto 
+	      "E" auto;
 }
 .grid-container > * {
 	box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
@@ -34,32 +36,32 @@ body{
 
 
 header {
-	grid-area: header;
+	grid-area: A;
 	background-color: plum; 
 }
 
 nav {
-	grid-area: navbar;
+	grid-area: B;
 	background-color: greenyellow;
 }
 
-aside {
-	grid-area: sidebar;
-	background-color: lightseagreen;
-}
-
-main { 
-    grid-area: main;
+section { 
+    grid-area: C;
     background-color: aqua;
  }
 
+aside {
+	grid-area: D;
+	background-color: lightseagreen;
+}
+
 footer{
-	grid-area: footer;
+	grid-area: E;
 	background-color: tan;
 }
 
-@media (min-width: 600px) {
-	.grid-container{
+@media (min-width: 640px) {
+	.grid-container {
 	     /*grid-template-columns: 200px auto;
 	     grid-template-rows: 100px 50px auto 100px;*/
 	     /*grid-template-areas:
@@ -69,20 +71,20 @@ footer{
 	     "footer footers"*/
 
         grid-template:
-         "header header" 100px
-	     "navbar navbar" 50px
-	     "sidebar main"  auto
-	     "footer footer" 100px /
-	     200px auto;      
+         "A A" 4rem
+	     "B B" 2rem
+	     "D C"  auto
+	     "E E" 3rem / 
+	     65% 35%;      
 	}
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
      .grid-container {
         grid-template:
-        "header header header" 100px
-	     "navbar main sidebar" auto
-	     "footer footer footer" 100px/
-         200px auto 200px;
+         "A A A" 4rem
+	     "B C D" auto
+	     "E E E" 3rem /
+         15% 55% 30%;
      }
 }
