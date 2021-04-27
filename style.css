@@ -23,7 +23,7 @@ body{
 	grid-template: 
 	      "A" auto
 	      "B" auto
-	      "C" 10rem
+	      "C" auto
 	      "D" auto 
 	      "E" auto;
 }
@@ -34,11 +34,24 @@ body{
 	text-align: center;
 }
 
+.grig-nav {
+	display: grid;
+	grid-template-columns: repeat(5,auto);
+}
+
+.grid-main {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+}
+
 
 header {
+
 	grid-area: A;
-	background-color: plum; 
+	background-color: plum;
 }
+
 
 nav {
 	grid-area: B;
@@ -58,6 +71,7 @@ aside {
 footer{
 	grid-area: E;
 	background-color: tan;
+	height: 100px;
 }
 
 @media (min-width: 640px) {
@@ -71,10 +85,10 @@ footer{
 	     "footer footers"*/
 
         grid-template:
-         "A A" 4rem
-	     "B B" 2rem
-	     "D C"  auto
-	     "E E" 3rem / 
+         "A A" auto
+	     "B B" auto
+	     "D C" auto
+	     "E E" auto / 
 	     65% 35%;      
 	}
 }
@@ -82,9 +96,52 @@ footer{
 @media (min-width: 768px) {
      .grid-container {
         grid-template:
-         "A A A" 4rem
+         "A A A" auto
 	     "B C D" auto
-	     "E E E" 3rem /
+	     "E E E" auto /
          15% 55% 30%;
      }
+
+     .grid-nav {
+     	display:grid;
+     	grid-template-columns: auto;
+     	grid-template-rows: repeat(5,2rem);
+     }
 }
+
+ul {
+	text-align: right; 
+	width: 100%;
+	border-radius: 8px;
+}
+
+li{
+	display: inline-block;
+
+}
+
+
+.nav-item {
+	color: #66D8F1;
+	background-color: white; 
+}
+
+
+.nav-item {
+	background-color: #E8E8E8;
+	text-align: center;
+	width: 113px;
+ 	height: 30px;
+ 	
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+}
+
+.nav-item {
+ 	margin: 0px 20px;
+ 	text-align: center;
+ 	color: #66D8F1;
+ 	display: inline-block;
+ 	border-radius: 8px;
+ }
+

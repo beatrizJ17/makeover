@@ -4,27 +4,101 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width-device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="slider.css">
 		<link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
 		<title>Make over</title>
 	</head>
 	<body class="grid-container">
-		<!---<div class="grid-container">--->
-        <header>
-        	Esto es un HEADER significa encabezado. 
+		<!---<div class="grid-container">--->				
+        <header>          
+            <!--Esto es un HEADER significa encabezado-->
+           <div id="slider">
+   <input type="radio" name="slider" id="slide1" checked>
+   <input type="radio" name="slider" id="slide2">
+   <input type="radio" name="slider" id="slide3">
+   <input type="radio" name="slider" id="slide4">
+   <div id="slides">
+      <div id="overflow">
+         <div class="inner">
+            <div class="slide slide_1">
+               <div class="slide-content">
+                  <h2>fabricación de papel</h2>               
+               </div>
+            </div>
+            <div class="slide slide_2">
+               <div class="slide-content">
+                  <h2>distribución de papel<h2>
+               </div>
+            </div>
+            <div class="slide slide_3">
+            	<img src="https://image.freepik.com/vector-gratis/hoja-papel-blanco-sobre-fondo-textura-madera_64749-3605.jpg">
+               <div class="slide-content">
+               </div>
+            </div>
+            <div class="slide slide_4">
+               <div class="slide-content">
+                  <h2>De todo en Rollos de Papel</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div id="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+   <div id="bullets">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+      <label for="slide4"></label>
+   </div>
+</div>
+  
     	</header>
-        <nav> 
-        	Esto es un NAV significa barra de navegación.
+
+        <nav class="grid-nav">        
+			
+			<div class="nav-item">
+			   Inicio			
+		  </div>	
+
+		  <div class="nav-item">
+			   Producto			
+		  </div>
+
+		  <div class="nav-item">
+			   Contactenos			
+		  </div>
     	</nav>
-        <section>
-       	 	Esta es una SECTION, como solo hay 1 seria MAIN
-       	 	<br>
-       	 	section significa sección y main significa principal.
+
+        <section class="grid-main">
+
+       	 	<h1>DE TODO EN ROLLOS DE PAPEL</h1> 
+
+			<h3>
+				Fabricación y Distribución de Rollos de papel		       
+		     </h3>
+
+			Multi-Rollos es una empresa guatemalteca con 33 años de estar en el mercado, dedicada a la fabricación y venta de rollos de papel, así como la distribución de suministros de máquinas registradoras e impresoras para punto de venta.
+
+		   
     	</section>
+
         <aside>
-        	Esto es un ASIDE, también conocido como SIDEBAR significa barra lateral.
+           Basamos nuestro desarrollo en un esfuerzo constante por dar el mejor servicio y atención a nuestros clientes.
+
+          Parte de nuestro servicio es la entrega a domicilio del producto, dentro del perímetro de la capital, en un tiempo no mayor de 24 horas, y encontrándonos en condiciones de concederles un tiempo de crédito, en función del volumen de su compra.
+         
     	</aside>
+
         <footer>
-       	 	Esto es un FOOTER, significa pie de pagina.
+       	MULTI ROLLOS
+           Teléfono: (502) 2230-2534
+           Correo electrónico: ventas@multirollosguatemala.com 
+           Dirección: 5ª . Calle 8-29 Zona1, Guatemala
     	</footer>
    <!--</div>-->
 	</body>
